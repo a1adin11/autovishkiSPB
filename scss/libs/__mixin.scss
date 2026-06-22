@@ -1,0 +1,17 @@
+@use "../libs/_variables" as v;
+
+@mixin sectionTitle {
+  font-size: 64px;
+
+  @media (max-width: 1200px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
+}

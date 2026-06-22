@@ -1,0 +1,63 @@
+@use '../../scss/libs/_variables' as v;
+@use '../../scss/libs/__mixin' as m;
+
+.root {
+  width: 100%;
+  padding: 120px 40px 80px 40px;
+  background-color: v.$gray--100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @media screen and (max-width: 800px) {
+    padding: 60px 40px 80px 40px;
+  }
+
+  .title {
+    @include m.sectionTitle;
+    color: v.$gray--800;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  .subTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+
+    span {
+      color: v.$gray--800;
+      font-weight: 100;
+      font-size: 24px;
+      max-width: 530px;
+      line-height: 40px;
+
+      @media (max-width: 800px) {
+        font-size: 18px;
+        max-width: 100%;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 390px);
+    gap: 16px;
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 767.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

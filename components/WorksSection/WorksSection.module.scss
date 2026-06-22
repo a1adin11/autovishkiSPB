@@ -1,0 +1,96 @@
+@use '../../scss/libs/_variables' as v;
+@use '../../scss/libs/__mixin' as m;
+
+.root {
+  background-color: v.$gray--100;
+  padding: 80px 40px;
+
+  @media screen and (max-width: 800px) {
+    padding: 60px 40px 80px 40px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+
+  @media screen and (min-width: 1700px) {
+    padding: 0px 300px;
+  }
+
+  @media (max-width: 767.98px) {
+    gap: 16px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  @media screen and (min-width: 1700px) {
+    max-width: 1800px;
+  }
+}
+
+.title {
+  @include m.sectionTitle;
+  color: v.$gray--800;
+  font-weight: 900;
+  text-align: center;
+}
+
+.subtitle {
+  color: v.$gray--700;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.trackWrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollLeft 55s linear infinite;
+}
+
+.trackReverse {
+  animation: scrollRight 55s linear infinite;
+}
+
+.card {
+  width: 280px;
+  flex-shrink: 0;
+
+  @media (max-width: 767.98px) {
+    width: 200px;
+  }
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

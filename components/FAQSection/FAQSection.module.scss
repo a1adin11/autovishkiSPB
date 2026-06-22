@@ -1,0 +1,38 @@
+@use '../../scss/libs/_variables' as v;
+@use '../../scss/libs/__mixin' as m;
+
+.root {
+  background-color: v.$gray--100;
+  padding: 120px 40px 80px 40px;
+
+  @media screen and (max-width: 800px) {
+    padding: 60px 40px 80px 40px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (max-width: 767.98px) {
+    gap: 32px;
+  }
+}
+
+.title {
+  @include m.sectionTitle;
+  line-height: 1;
+  color: v.$gray--800;
+  font-weight: 900;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 767.98px) {
+    gap: 12px;
+  }
+}

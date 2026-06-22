@@ -1,0 +1,76 @@
+@use '../../../../scss/libs/_variables' as v;
+
+.root {
+  width: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+
+  > * {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+}
+
+.contentOpen {
+  grid-template-rows: 1fr;
+
+  > * {
+    opacity: 1;
+    transition: opacity 0.25s ease 0.15s;
+  }
+}
+
+.title {
+  color: v.$gray--800;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+
+  @media (max-width: 767.98px) {
+    font-size: 16px;
+  }
+}
+
+.text {
+  padding: 16px 0 0 56px;
+  color: v.$gray--700;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 30px;
+
+  @media (max-width: 767.98px) {
+    font-size: 16px;
+    padding: 12px 0 0 0;
+    line-height: 1.5;
+  }
+}
