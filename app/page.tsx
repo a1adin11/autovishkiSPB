@@ -4,7 +4,8 @@ import MainSection from '@/components/MainSection'
 import { FAQSection } from '@/components/FAQSection'
 import { WorksSection } from '@/components/WorksSection'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://avtovyshki-spb.ru'
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn----7sbeca0bn4antf8eub.online'
 
 const jsonLd = {
   '@context': 'https://schema.org',

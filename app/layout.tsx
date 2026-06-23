@@ -14,8 +14,8 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
 })
 
-// TODO: замените на реальный домен перед деплоем
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://avtovyshki-spb.ru'
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn----7sbeca0bn4antf8eub.online'
 
 export const viewport: Viewport = {
   width: 'device-width',
