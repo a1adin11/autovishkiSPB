@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
-import React from "react";
+import type { Metadata } from 'next'
+import React from 'react'
 
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google'
 
-import "@scss/App.scss";
-import Header from "@/components/Header";
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
+import '@scss/App.scss'
+import Header from '@/components/Header'
 
 const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
 
 // TODO: замените на реальный домен перед деплоем
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://avtovyshki-spb.ru'
@@ -59,19 +61,20 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Header></Header>
+        <Header />
         {children}
+        <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }
