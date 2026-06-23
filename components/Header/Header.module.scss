@@ -9,14 +9,24 @@
   align-items: center;
   justify-content: flex-start;
   z-index: 20;
-  background-color: #fff;
   padding-top: env(safe-area-inset-top);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top);
+    background-color: #fff;
+  }
 }
 
 .wrapper {
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
+  background-color: #fff;
   height: 80px;
   display: flex;
   flex-direction: row;
