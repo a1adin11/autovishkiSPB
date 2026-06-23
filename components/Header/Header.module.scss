@@ -9,13 +9,14 @@
   align-items: center;
   justify-content: flex-start;
   z-index: 20;
+  background-color: #fff;
+  padding-top: env(safe-area-inset-top);
 }
 
 .wrapper {
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
-  background-color: #fff;
   height: 80px;
   display: flex;
   flex-direction: row;
