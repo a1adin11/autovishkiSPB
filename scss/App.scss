@@ -9,10 +9,12 @@
 
 html {
   font-size: 62.5%;
+  background-color: #fff;
 }
 
 body {
   font-size: 1.6rem;
+  overscroll-behavior-y: none;
 }
 
 ::-webkit-scrollbar-thumb {
