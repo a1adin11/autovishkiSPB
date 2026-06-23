@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import React from 'react'
 
 import { Inter } from 'next/font/google'
@@ -16,6 +16,13 @@ const inter = Inter({
 
 // TODO: замените на реальный домен перед деплоем
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://avtovyshki-spb.ru'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#ffffff',
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -70,9 +77,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      </head>
       <body className={inter.className}>
         <Header />
         {children}
