@@ -3,8 +3,6 @@ import React from 'react'
 
 import { Inter } from 'next/font/google'
 
-import { SpeedInsights } from '@vercel/speed-insights/next'
-
 import '@scss/App.scss'
 import Header from '@/components/Header'
 
@@ -80,7 +78,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
-        <SpeedInsights />
       </body>
     </html>
   )

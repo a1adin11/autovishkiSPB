@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
+export const dynamic = 'force-static'
 export const alt = 'Аренда автовышки в Санкт-Петербурге и Ленинградской области'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
@@ -77,6 +77,8 @@ export default function Image() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
           <div
             style={{
+              display: 'flex',
+              flexDirection: 'column',
               fontSize: 88,
               fontWeight: 700,
               color: '#ffffff',
@@ -84,9 +86,8 @@ export default function Image() {
               letterSpacing: -3,
             }}
           >
-            Аренда
-            <br />
-            автовышки
+            <span>Аренда</span>
+            <span>автовышки</span>
           </div>
 
           <div style={{ display: 'flex', gap: 12 }}>
