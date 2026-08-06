@@ -16,6 +16,7 @@ const jsonLd = {
       name: 'Аренда автовышки в Санкт-Петербурге',
       telephone: '+79219557808',
       url: SITE_URL,
+      image: `${SITE_URL}/opengraph-image.png`,
       description:
         'Аренда автовышки в Санкт-Петербурге и Ленинградской области. Высота подъёма от 9 до 75 м. Работаем 24/7 с опытным оператором.',
       address: {
@@ -29,6 +30,7 @@ const jsonLd = {
         { '@type': 'AdministrativeArea', name: 'Ленинградская область' },
       ],
       openingHours: 'Mo-Su 00:00-23:59',
+      sameAs: ['https://t.me/autovishki_spb'],
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+79219557808',
