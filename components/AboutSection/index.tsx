@@ -1,10 +1,10 @@
 
-import img1 from "../../public/pictures/About/Image1.png";
-import img2 from "../../public/pictures/About/Image2.png";
-import img3 from "../../public/pictures/About/Image3.png";
-import img4 from "../../public/pictures/About/Image4.png";
-import img5 from "../../public/pictures/About/Image5.png";
-import img6 from "../../public/pictures/About/Image6.png";
+import img1 from "../../public/pictures/About/Image1.webp";
+import img2 from "../../public/pictures/About/Image2.webp";
+import img3 from "../../public/pictures/About/Image3.webp";
+import img4 from "../../public/pictures/About/Image4.webp";
+import img5 from "../../public/pictures/About/Image5.webp";
+import img6 from "../../public/pictures/About/Image6.webp";
 
 import { Container } from "../Container";
 import { Chip } from "../ui/Chip";
