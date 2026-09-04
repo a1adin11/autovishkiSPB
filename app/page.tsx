@@ -17,6 +17,12 @@ const jsonLd = {
       telephone: '+79219557808',
       url: SITE_URL,
       image: `${SITE_URL}/opengraph-image.png`,
+      priceRange: '₽₽',
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 59.9311,
+        longitude: 30.3609,
+      },
       description:
         'Аренда автовышки в Санкт-Петербурге и Ленинградской области. Высота подъёма от 9 до 75 м. Работаем 24/7 с опытным оператором.',
       address: {
@@ -93,12 +99,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className={styles.root}>
+      <main className={styles.root}>
         <MainSection />
         <AboutSection />
         <WorksSection />
         <FAQSection />
-      </div>
+      </main>
     </>
   )
 }

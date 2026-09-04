@@ -27,7 +27,11 @@ const Button: React.FC<IButton> = ({
   }
 
   return (
-    <button className={cn} {...props}>
+    <button
+      className={cn}
+      {...(variant === 'close' ? { 'aria-label': isOpen ? 'Свернуть' : 'Развернуть' } : {})}
+      {...props}
+    >
       {content}
     </button>
   )
