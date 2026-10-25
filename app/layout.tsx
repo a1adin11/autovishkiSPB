@@ -14,7 +14,7 @@ const inter = Inter({
 })
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn----7sbeca0bn4antf8eub.online'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://xn----7sbeca0bn4antf8eub.online'
 
 export const viewport: Viewport = {
   width: 'device-width',

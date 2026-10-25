@@ -25,6 +25,8 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://xn----7sbeca0bn4antf8eub.online
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
